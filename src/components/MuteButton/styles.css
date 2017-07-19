@@ -1,0 +1,7 @@
+.mute-button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 3px;
+}

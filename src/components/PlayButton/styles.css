@@ -1,0 +1,32 @@
+.play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-style: solid;
+    border-width: 2.5em 0 2.5em 5em;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+
+    pointer-events: none;
+    transition: visibility 0s, opacity 0.2s linear;
+    visibility: visible;
+    opacity: 1;
+
+    &__inner {
+        position: absolute;
+        top: -2.3em;
+        left: -4.9em;
+        width:0;
+
+        border-style: solid;
+        border-width: 2.3em 0 2.3em 4.6em;
+        border-color: transparent transparent transparent white;
+    }
+
+    &_hidden {
+        transition: visibility 0.2s, opacity 0.2s linear;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
