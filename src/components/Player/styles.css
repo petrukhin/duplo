@@ -1,0 +1,10 @@
+.player {
+    background: black;
+    position: relative;
+
+    &, &__video-tag {
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -1,0 +1,6 @@
+.timeline {
+  flex-grow: 1;
+  height: 24px;
+  margin: 3px;
+  cursor: pointer;
+}
