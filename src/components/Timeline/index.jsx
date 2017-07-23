@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.css';
 
-export default class Player extends React.Component {
+export default class Timeline extends React.Component {
     render() {
         const { time, duration } = this.props;
         return <input

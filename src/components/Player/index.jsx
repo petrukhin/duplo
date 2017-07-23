@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Controls from "../Controls";
 import styles from './styles.css';
 
-export default class Player extends React.Component {
+/**
+ * Simple Player without Chapters and Image
+ */
+export default class Player extends Component {
+    static propTypes = {
+        src: PropTypes.string.isRequired
+    };
+
     constructor(props) {
         super(props);
         this.state = {
