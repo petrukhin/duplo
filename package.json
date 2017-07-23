@@ -4,7 +4,7 @@
   "description": "The best player for your duplo",
   "main": "src/components/Player/index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
@@ -40,6 +40,14 @@
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "coveralls": "^2.13.1",
-    "react-styleguidist": "^5.5.9"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
+    "react-styleguidist": "^5.5.9",
+    "react-test-renderer": "^15.6.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
   }
 }
