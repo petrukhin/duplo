@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="play-button"
+  role="button"
+>
+  <div
+    className="play-button__inner"
+  />
+</div>
+`;
