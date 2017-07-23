@@ -7,7 +7,7 @@ export default function(props) {
     const className = cx(styles['play-button'], {
         [styles['play-button_hidden']]: hidden
     });
-    return <div className={className}>
+    return <div className={className} role="button">
         <div className={styles['play-button__inner']}/>
     </div>;
 };
