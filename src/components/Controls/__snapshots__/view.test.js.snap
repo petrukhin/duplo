@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="controls controls_hidden"
+  onClick={undefined}
+  onMouseMove={[Function]}
+>
+  <div
+    className="play-button"
+    role="button"
+  >
+    <div
+      className="play-button__inner"
+    />
+  </div>
+  <div
+    className="controls__bottom"
+    onClick={[Function]}
+  >
+    <svg
+      className="mute-button"
+      height="24"
+      onClick={undefined}
+      viewBox="0 0 75 75"
+      width="24"
+    >
+      <g
+        stroke="#fff"
+        strokeWidth="5"
+      >
+        <path
+          d="M39.389 13.769L22.235 28.606H6v19.093h15.989l17.4 15.051V13.769z"
+          fill="#fff"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M48.128 49.03a20.087 20.087 0 0 0-.085-21.453M55.082 20.537a29.86 29.86 0 0 1 5.884 17.84 29.83 29.83 0 0 1-5.788 17.699M61.71 62.611a38.952 38.952 0 0 0 8.418-24.233 38.968 38.968 0 0 0-8.519-24.368"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+    <input
+      className="timeline"
+      max={undefined}
+      min={0}
+      onChange={[Function]}
+      type="range"
+      value={undefined}
+    />
+    <div
+      className="countdown"
+    >
+      NaN:NaN/NaN:NaN
+    </div>
+  </div>
+</div>
+`;

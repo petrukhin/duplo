@@ -4,7 +4,7 @@
   "description": "The best player for your duplo",
   "main": "src/components/Player/index.jsx",
   "scripts": {
-    "test": "jest",
+    "test": "jest --config=jest.config.json",
     "guide:server": "styleguidist server",
     "guide:build": "styleguidist build",
     "phantomjs": "phantomjs --webdriver=4444",
@@ -43,6 +43,7 @@
   "devDependencies": {
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "2.13.1",
+    "enzyme": "2.9.1",
     "gemini": "5.0.0-alpha.3",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
