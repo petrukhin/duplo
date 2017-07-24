@@ -6,13 +6,13 @@ import MuteButton from '../MuteButton';
 import cx from 'classnames';
 import styles from './styles.css'
 
-const HIDE_TIMEOUT = 3000;
+const HIDE_TIMEOUT = 1000;
 
 export default class Controls extends React.Component {
 
     constructor() {
         super();
-        this.state = { hidden: false }
+        this.state = { hidden: true }
     }
 
     render() {
@@ -36,10 +36,6 @@ export default class Controls extends React.Component {
                 <Countdown time={time} duration={duration}/>
             </div>
         </div>
-    }
-
-    componentDidMount() {
-        this.scheduleControlsHide();
     }
 
     clearControlsHideTimeout() {
