@@ -4,14 +4,14 @@ import Controls from '../Controls';
 import styles from './styles.css';
 
 /**
- * Simple Player without Chapters and Image
+ * Simple Video Player
  */
 export default class Player extends Component {
     static propTypes = {
         src: PropTypes.string.isRequired,
         poster: PropTypes.string,
-        width: PropTypes.string.isRequired,
-        height: PropTypes.string.isRequired
+        width: PropTypes.string,
+        height: PropTypes.string
     };
 
     static defaultProps = {
