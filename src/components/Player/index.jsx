@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Controls from '../Controls';
 import styles from './styles.css';
 import initMetrika from '../../metrika/mc.js'
+import logError from '../../metrika/error.js'
 
 /**
  * Simple Video Player
@@ -66,28 +67,17 @@ export default class Player extends Component {
 
     seek(time) {
         if (time > 10) {
-            yaCounter[0].params({
-                error: {
-                    seek: {
-                        10: {
-                            'minRange': time
-                        }
-                    }
-                }
-            })
+            logError('seek', 121, 'seek > 10');
         }
 
         if (time > 20) {
-            yaCounter[0].params({
-                error: {
-                    seek: {
-                        20: {
-                            'middleOfRange': time
-                        }
-                    }
-                }
-            })
+            logError('seek', 155, 'seek > 20');
         }
+
+        if (time > 30) {
+            logError('seek', 199, 'seek > 30');
+        }
+
         this.setState({ time });
         this.video.currentTime = time;
     }
