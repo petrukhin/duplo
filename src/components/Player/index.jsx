@@ -68,10 +68,11 @@ export default class Player extends Component {
         if (time > 10) {
             yaCounter[0].params({
                 error: {
-                    code: 300,
-                    type: 'outOfRange',
-                    value: time,
-                    maxValue: 10
+                    seek: {
+                        10: {
+                            'minRange': time
+                        }
+                    }
                 }
             })
         }
@@ -79,10 +80,11 @@ export default class Player extends Component {
         if (time > 20) {
             yaCounter[0].params({
                 error: {
-                    code: 120,
-                    type: 'middleRange',
-                    value: time,
-                    maxValue: 20
+                    seek: {
+                        20: {
+                            'middleOfRange': time
+                        }
+                    }
                 }
             })
         }
