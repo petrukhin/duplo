@@ -1,8 +1,25 @@
-import React from 'react';
-import Controls from "../Controls";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Controls from '../Controls';
 import styles from './styles.css';
 
-export default class Player extends React.Component {
+/**
+ * Simple Video Player
+ */
+export default class Player extends Component {
+    static propTypes = {
+        src: PropTypes.string.isRequired,
+        poster: PropTypes.string,
+        width: PropTypes.string,
+        height: PropTypes.string
+    };
+
+    static defaultProps = {
+        width: '640px',
+        height: '360px',
+        poster: ''
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -12,10 +29,12 @@ export default class Player extends React.Component {
             muted: props.muted || false
         }
     }
+
     render() {
         const { time, duration, playing, muted } = this.state;
+        const { poster, width, height } = this.props;
 
-        return <div className={styles['player']}>
+        return <div className={styles['player']} style={{width, height}}>
             <video
                 className={styles['player__video-tag']}
                 src={this.props.src}
@@ -27,11 +46,14 @@ export default class Player extends React.Component {
                 onPause={() => this.onVideoPlayingChange()}
                 onEnded={() => this.onVideoPlayingChange()}
                 muted={muted}
+                poster={poster}
+                style={{width, height}}
             />
             <Controls
                 time={time} duration={duration} playing={playing}
                 onSeek={(val) => this.seek(val)}
                 onClick={() => this.togglePlay()}
+                onTouchStart={() => this.togglePlay()}
                 muted={muted}
                 toggleMute={() => this.toggleMute()}
             />
