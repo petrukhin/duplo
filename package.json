@@ -46,6 +46,7 @@
     "coveralls": "2.13.1",
     "enzyme": "2.9.1",
     "gemini": "5.0.0-alpha.3",
+    "html-reporter": "^0.2.2",
     "http-server": "^0.10.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
