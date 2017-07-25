@@ -9,4 +9,4 @@ install:
   - npm install
 script:
   - npm test
-  - npm run gemini:test -- -config=.gemini.saucelabs.js
+  - npm run gemini:test -- --config=".gemini.saucelabs.js"
