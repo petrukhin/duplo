@@ -10,7 +10,7 @@
     "phantomjs": "phantomjs --webdriver=4444",
     "gemini:update": "gemini update './gemini/**/*.test.js'",
     "gemini:test": "gemini test './gemini/**/*.test.js'",
-    "guide:surge": "surge ./guide"
+    "guide:surge": "env SURGE_LOGIN=k.s.lekh@gmail.com SURGE_TOKEN=2ac16ebc5666f01a3c7be760995f5b74 surge ./guide/ --domain=premium-jeans.surge.sh"
   },
   "repository": {
     "type": "git",
