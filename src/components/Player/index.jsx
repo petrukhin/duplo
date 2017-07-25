@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Controls from '../Controls';
 import styles from './styles.css';
+import initMetrika from '../../metrika/mc.js'
 
 /**
  * Simple Video Player
@@ -28,6 +29,10 @@ export default class Player extends Component {
             playing: false,
             muted: props.muted || false
         }
+    }
+
+    componentDidMount() {
+        initMetrika(45426990);
     }
 
     render() {
@@ -60,6 +65,27 @@ export default class Player extends Component {
     }
 
     seek(time) {
+        if (time > 10) {
+            yaCounter[0].params({
+                error: {
+                    code: 300,
+                    type: 'outOfRange',
+                    value: time,
+                    maxValue: 10
+                }
+            })
+        }
+
+        if (time > 20) {
+            yaCounter[0].params({
+                error: {
+                    code: 120,
+                    type: 'middleRange',
+                    value: time,
+                    maxValue: 20
+                }
+            })
+        }
         this.setState({ time });
         this.video.currentTime = time;
     }
