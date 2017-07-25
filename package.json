@@ -9,7 +9,7 @@
     "guide:build": "styleguidist build",
     "phantomjs": "phantomjs --webdriver=4444",
     "gemini:update": "gemini update './gemini/**/*.test.js'",
-    "gemini:test": "gemini test './gemini/**/*.test.js'"
+    "gemini:test": "gemini test './gemini/**/*.test.js' --config='gemini.saucelabs.js'"
   },
   "repository": {
     "type": "git",
