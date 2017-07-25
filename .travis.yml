@@ -9,5 +9,11 @@ install:
   - npm install
 script:
   - npm test
-  - cp .gemini.saucelabs.js .gemini.js
-  - npm run gemini:test -- --config="./.gemini.js"
+  - npm run guide:build
+  - cp ./.gemini.saucelabs.js ./.gemini.js
+  - npm run gemini:test
+
+deploy:
+  provider: surge
+  project: ./guide/
+  on: gemini-test-enable
