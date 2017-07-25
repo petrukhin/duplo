@@ -53,6 +53,7 @@ export default class Player extends Component {
                 time={time} duration={duration} playing={playing}
                 onSeek={(val) => this.seek(val)}
                 onClick={() => this.togglePlay()}
+                onTouchStart={() => this.togglePlay()}
                 muted={muted}
                 toggleMute={() => this.toggleMute()}
             />

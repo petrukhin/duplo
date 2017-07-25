@@ -2,5 +2,6 @@ module.exports = {
     title: 'Плеер Мобилизации',
     assetsDir: './guide/assets',
     styleguideDir: './guide',
-    skipComponentsWithoutExample: false
+    skipComponentsWithoutExample: false,
+    webpackConfig: require('./webpack.config')
 };
