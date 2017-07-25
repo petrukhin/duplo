@@ -6,3 +6,7 @@ cache:
     - "node_modules"
 install:
   - npm install
+before_scirpt:
+  - printenv
+script:
+  - npm test
