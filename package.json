@@ -9,7 +9,8 @@
     "guide:build": "styleguidist build",
     "phantomjs": "phantomjs --webdriver=4444",
     "gemini:update": "gemini update './gemini/**/*.test.js'",
-    "gemini:test": "gemini test './gemini/**/*.test.js'"
+    "gemini:test": "gemini test './gemini/**/*.test.js'",
+    "guide:surge": "env SURGE_LOGIN=k.s.lekh@gmail.com SURGE_TOKEN=2ac16ebc5666f01a3c7be760995f5b74 surge ./guide/ --domain=premium-jeans.surge.sh"
   },
   "repository": {
     "type": "git",
@@ -45,12 +46,15 @@
     "coveralls": "2.13.1",
     "enzyme": "2.9.1",
     "gemini": "5.0.0-alpha.3",
+    "html-reporter": "^0.2.2",
+    "http-server": "^0.10.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "20.0.4",
     "phantomjs": "2.1.7",
     "react-styleguidist": "5.5.9",
     "react-test-renderer": "15.6.1",
-    "selenium-standalone": "6.5.0"
+    "selenium-standalone": "6.5.0",
+    "surge": "^0.19.0"
   },
   "jest": {
     "moduleNameMapper": {
