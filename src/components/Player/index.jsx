@@ -46,7 +46,6 @@ export default class Player extends Component {
                 onPause={() => this.onVideoPlayingChange()}
                 onEnded={() => this.onVideoPlayingChange()}
                 muted={muted}
-                poster={poster}
                 style={{width, height}}
             />
             <Controls
