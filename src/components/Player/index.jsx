@@ -32,7 +32,7 @@ export default class Player extends Component {
 
     render() {
         const { time, duration, playing, muted } = this.state;
-        const { poster, width, height } = this.props;
+        const { width, height } = this.props;
 
         return <div className={styles['player']} style={{width, height}}>
             <video
