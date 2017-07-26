@@ -28,8 +28,6 @@ export default class Controls extends React.Component {
             onClick={onClick}
             onMouseMove={() => this.scheduleControlsHide()}>
 
-            <PlayButton hidden={playing}/>
-
             <div className={styles['controls__bottom']} onClick={(e) => e.stopPropagation()}>
                 <MuteButton onClick={toggleMute} muted={muted}/>
                 <Timeline time={time} duration={duration} onSeek={onSeek}/>
